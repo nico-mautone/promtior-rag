@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-openai
+beautifulsoup4
+langchain-chroma
+langserve[all]
+pydantic
+langchain-text-splitters
+python-dotenv
+pypdf
