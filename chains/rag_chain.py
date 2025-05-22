@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from config import EMBEDDING_MODEL, LLM_MODEL, OPENAI_API_KEY, PERSIST_DIR
 
 _SYSTEM = """You are Promtior's AI assistant. Use ONLY the provided context to answer. Cite sources with [#]."""
