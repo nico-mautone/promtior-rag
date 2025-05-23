@@ -112,3 +112,26 @@ To update your deployment:
 ```bash
 copilot svc deploy
 ```
+
+To pause the application:
+
+```bash
+copilot svc pause
+```
+
+To resume the application:
+
+```bash
+copilot svc resume
+```
+
+To delete the application:
+
+```bash
+copilot svc delete
+```
+
+### Notes
+
+The application is currently paused, but once deployed, it will be accessible at the following URL provided by Copilot.
+https://pvqdn8263x.eu-west-1.awsapprunner.com/

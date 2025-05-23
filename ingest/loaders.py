@@ -14,12 +14,9 @@ def load_documents():
     """
     web_docs = WebBaseLoader(PROMTIOR_URLS).load()
     print(f"Loaded {len(web_docs)} web documents")
-    print(web_docs)
     
     pdf_docs = PyPDFLoader(PROMTIOR_PDF).load()
     print(f"Loaded {len(pdf_docs)} PDF documents")
-    
-    print(f"Loaded {len(web_docs)} web documents and {len(pdf_docs)} PDF documents")
     
     return web_docs, pdf_docs
 

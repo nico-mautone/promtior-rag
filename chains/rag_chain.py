@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from config import EMBEDDING_MODEL, LLM_MODEL, OPENAI_API_KEY, PERSIST_DIR
 
-_SYSTEM = """You are Promtior's AI assistant. Use ONLY the provided context to answer. Cite sources with [#]."""
+_SYSTEM = """You are Promtior's AI assistant. Use ONLY the provided context to answer."""
 template = PromptTemplate(
     input_variables=["context", "question"],
     template=_SYSTEM + "\n\nContext:\n{context}\n\nQuestion: {question}"
