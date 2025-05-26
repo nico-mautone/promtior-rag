@@ -22,7 +22,7 @@ cd promtior-rag
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
 ### 3. Install dependencies
@@ -133,5 +133,5 @@ copilot svc delete
 
 ### Notes
 
-The application is currently paused, but once deployed, it will be accessible at the following URL provided by Copilot.
+The application is currently paused (due to the potential cost of running the service), but once resumed, it will be accessible at the following URL provided by Copilot.
 https://pvqdn8263x.eu-west-1.awsapprunner.com/
