@@ -134,4 +134,4 @@ copilot svc delete
 ### Notes
 
 The application is currently paused (due to the potential cost of running the service), but once resumed, it will be accessible at the following URL provided by Copilot.
-https://pvqdn8263x.eu-west-1.awsapprunner.com/
+[https://pvqdn8263x.eu-west-1.awsapprunner.com/chat/playground](https://pvqdn8263x.eu-west-1.awsapprunner.com/chat/playground/)
