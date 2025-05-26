@@ -7,7 +7,7 @@ I developed a Retrieval-Augmented Generation (RAG) chatbot for Promtior that ans
 - **LangServe runtime**: recommended by the Promtior team.
 - **Offline ingestion (`ingestion/` folder)**  
   - Runs before app startup—parses website pages and PDF files  
-  - Splits text into 750-token chunks with 100-token overlap  
+  - Splits text into 750-token chunks with 100-token overlap (configurable in `config.py`) 
   - Generates embeddings (OpenAI text-embedding-3-small) and loads into ChromaDB  
   - _(Future)_ Schedule as a cronjob to refresh content automatically  
 - **Retrieval**  
@@ -38,13 +38,13 @@ I developed a Retrieval-Augmented Generation (RAG) chatbot for Promtior that ans
 
 - **Duplicate chunks**
   - *Challenge*: the app was not retrieving the correct chunks.
-  - *Solution*: I found out that when I ran the ingestion script, it was not deleting the old vector store, so the new chunks were not being added to the vector store. I added a step to delete the old vector store in the ingestion script.
+  - *Solution*: I found out that when I ran the ingestion script, it was not deleting the old vector store, so it resulted in tons of duplicate chunks. I added a step to delete the old vector store in the ingestion script.
 
 ## Future Work
 
-- Move secrets into **AWS Secrets Manager** instead of embedding them in the container image  
+- Move secrets into **AWS Secrets Manager** instead of including them in the container image  
 - Automate the ingestion pipeline with a scheduled **cronjob** to keep ChromaDB content up to date  
-- Fix the issue with chat history caused by the current implementation of the LangServe runtime
+- Fix the issue with chat history caused by the current implementation of the LangServe runtime (the conversation history is not working as expected in this version of the app)
 - Try different models, for the moment I'm just using the cheapest ones.
 
 ## Diagram
